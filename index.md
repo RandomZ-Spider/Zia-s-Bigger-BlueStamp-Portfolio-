@@ -39,7 +39,7 @@ My first milestone was pairing two bluetooth modules together and being able to 
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | **Part** | **Quantity** | **Description** | **Reference Designator** | **Cost** | **Website**
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| Robot Kit | 1 | Chassis, Battery Pack, DC Motors, Wheels, etc. | M1, M2 | 18.99 | [amazon](https://www.amazon.com/perseids-Chassis-Encoder-Wheels-Battery/dp/B07DNYQ3PX)
+| Robot Kit | 1 | Chassis, Battery Pack, DC Motors, Wheels, etc. | M1, M2 | 18.99 | [amazon](https://www.amazon.com/gp/product/B06VTP8XBQ)
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | Bluetooth Module | 2 | Serial Communication | HC-05 | 19.98 | [amazon](https://www.amazon.com/HiLetgo-Wireless-Bluetooth-Transceiver-Arduino/dp/B071YJG8DR)
 |:--:|:--:|:--:|:--:|:--:|:--:|
