@@ -37,7 +37,7 @@ My first milestone was pairing two bluetooth modules together and being able to 
 # Bill of Materials
 
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| **Part** | **Quantity** | **Description** | **Reference Designator** | **Cost** | **Website** |
+| **Part** | **Quantity** | **Description** | **Reference Designator** | **Cost** | **Website**
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | Robot Kit | 1 | Chassis, Battery Pack, DC Motors, Wheels, etc. | M1, M2 | 18.99 | [amazon](https://www.amazon.com/perseids-Chassis-Encoder-Wheels-Battery/dp/B07DNYQ3PX)
 |:--:|:--:|:--:|:--:|:--:|:--:|
@@ -60,7 +60,7 @@ My first milestone was pairing two bluetooth modules together and being able to 
 # Tools Required
 
 |:--:|:--:|:--:|
-| **Tool** | **Cost** | **Website** |
+| **Tool** | **Cost** | **Website**
 |:--:|:--:|:--:|
 | Soldering Iron | 15.99 | [amazon](https://www.amazon.com/Soldering-Kit-Temperature-Desoldering-Electronics/dp/B07GTGGLXN/ref=asc_df_B07GTGGLXN/?tag=hyprod-20&linkCode=df0&hvadid=241999416883&hvpos=&hvnetw=g&hvrand=137463208067721732&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9031525&hvtargid=pla-590653449503&psc=1)
 | Screwdriver Kit | 6.99 | [amazon](https://www.amazon.com/Small-Screwdriver-Set-Mini-Magnetic/dp/B08RYXKJW9)
@@ -70,3 +70,284 @@ My first milestone was pairing two bluetooth modules together and being able to 
 # Schematics
 
 ![Schematics](https://user-images.githubusercontent.com/82551067/176963218-7c0eecbe-7689-48f5-b6ea-48579ae6fb1c.jpg)
+
+# Final Code
+
+```c++
+// This is for the Arduino Uno
+// Set up the first bluetooth module
+
+#include <SoftwareSerial.h>
+
+#define tx 2
+#define rx 3
+
+SoftwareSerial configBt(rx, tx);
+
+void setup()
+{
+  Serial.begin(38400);
+  configBt.begin(38400);
+  pinMode(tx, OUTPUT);
+  pinMode(rx, INPUT);
+}
+
+void loop()
+{
+  if (configBt.available())
+  {
+    Serial.print((char)configBt.read());
+  }
+  if (Serial.available())
+  {
+    configBt.write(Serial.read());
+  }
+}
+
+```
+
+```c++
+// This is for the Arduino Micro
+// Set up the other bluetooth module
+
+void setup()
+{
+  Serial.begin(38400);
+  Serial1.begin(38400);
+}
+
+void loop()
+{
+  if (Serial1.available())
+  {
+    Serial.print((char)Serial1.read());
+  }
+  if (Serial.available())
+  {
+    Serial1.write(Serial.read());
+  }
+}
+
+```
+
+```c++
+// This is a test program to check if DC Motors are working
+
+int in1 = 6;
+int in2 = 7;
+int in3 = 8;
+int in4 = 9;
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  pinMode(in3, OUTPUT);
+  pinMode(in4, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, HIGH);
+  delay(1000);
+}
+
+```
+
+```c++
+// This is to determine the gestures based on the position of the ADXL345 Accelerometer
+
+#include <Wire.h>
+#include <Adafruit_Sensor.h>
+#include <Adafruit_ADXL345_U.h>
+
+/* Assign a unique ID to this sensor at the same time */
+Adafruit_ADXL345_Unified accel = Adafruit_ADXL345_Unified(12345);
+ 
+void setup(void) 
+{
+  Serial.begin(38400);
+  Serial1.begin(38400);
+  Serial.println("Accelerometer Test"); Serial.println("");
+  
+  /* Initialise the sensor */
+  if(!accel.begin())
+  {
+    /* There was a problem detecting the ADXL345 ... check your connections */
+    Serial.println("Ooops, no ADXL345 detected ... Check your wiring!");
+    while(1);
+  }
+
+  /* Set the range to whatever is appropriate for your project */
+  accel.setRange(ADXL345_RANGE_16_G);
+  // accel.setRange(ADXL345_RANGE_8_G);
+  // accel.setRange(ADXL345_RANGE_4_G);
+  // accel.setRange(ADXL345_RANGE_2_G);
+  
+  Serial.println("");
+}
+
+void loop(void) 
+{
+  /* Get a new sensor event */ 
+  sensors_event_t event; 
+  accel.getEvent(&event);
+  double accelerationX = event.acceleration.x;
+  double accelerationY = event.acceleration.y;
+  double accelerationZ = event.acceleration.z;
+  if (accelerationY >= 7.50) {
+    Serial1.write('F');
+  }
+  else if (accelerationY <= -5) {
+    Serial1.write('B');
+  }
+  else if (accelerationX <= -5.25) {
+    Serial1.write('L');
+  }
+  else if (accelerationX >= 5.25) {
+    Serial1.write('R');
+  }
+  else {
+    Serial1.write('S');
+  }
+  delay(500);
+}
+
+```
+
+```c++
+// This is to receive data from the other bluetooth module and read the gestures
+// The robot should move accordingly! 
+
+#include <SoftwareSerial.h>
+
+#define tx 2
+#define rx 3
+
+SoftwareSerial configBt(rx, tx);
+
+//character variable for command
+char c = "";
+
+//start at 50% duty cycle
+//int s = 120;
+
+//change based on motor pins
+int in1 = 6;
+int in2 = 7;
+int in3 = 8;
+int in4 = 9;
+
+void setup()
+{
+  //opens serial monitor and bluetooth serial monitor
+  Serial.begin(38400);
+  configBt.begin(38400);
+  pinMode(tx, OUTPUT);
+  pinMode(rx, INPUT);
+
+  //initializes all motor pins as outputs
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  pinMode(in3, OUTPUT);
+  pinMode(in4, OUTPUT);
+}
+
+void loop()
+{
+  //checks for bluetooth data
+  if (configBt.available()){
+    //if available stores to command character
+    c = (char)configBt.read();
+    //prints to serial
+    Serial.println(c);
+  }
+
+  //acts based on character
+  switch(c){
+    
+    //forward case
+    case 'F':
+      forward();
+      break;
+      
+    //left case
+    case 'L':
+      left();
+      break;
+      
+    //right case
+    case 'R':
+      right();
+      break;
+      
+    //back case
+    case 'B':
+      back();
+      break;
+      
+    //default is to stop robot
+    case 'S':
+      freeze();
+    }
+}
+
+//moves robot forward 
+void forward(){
+  
+    //chages directions of motors
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, HIGH);
+    digitalWrite(in3, HIGH);
+    digitalWrite(in4, LOW);
+
+  }
+
+//moves robot left
+void left(){
+
+    //changes directions of motors
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, HIGH);
+    digitalWrite(in3, LOW);
+    digitalWrite(in4, HIGH);
+
+  }
+
+//moves robot right
+void right(){
+
+    //changes directions of motors
+    digitalWrite(in1, HIGH);
+    digitalWrite(in2, LOW);
+    digitalWrite(in3, HIGH);
+    digitalWrite(in4, LOW);
+
+  }
+
+//moves robot backwards
+void back(){
+
+    //changes directions of motors
+    digitalWrite(in1, HIGH);
+    digitalWrite(in2, LOW);
+    digitalWrite(in3, LOW);
+    digitalWrite(in4, HIGH);
+
+  }
+
+//stops robot
+void freeze(){
+
+    //changes directions of motors
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, LOW);
+    digitalWrite(in3, LOW);
+    digitalWrite(in4, LOW);
+
+  }
+
+```
