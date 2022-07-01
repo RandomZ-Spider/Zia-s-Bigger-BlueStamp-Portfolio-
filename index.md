@@ -7,18 +7,22 @@ This project is to be able to control a robot by making gestures with our hands.
 
 ![Headstone Image](https://bluestampengineering.com/wp-content/uploads/2016/05/improve.jpg)
   
-# Final Milestone
-My final milestone is the increased reliability and accuracy of my robot. I ameliorated the sagging and fixed the reliability of the finger. As discussed in my second milestone, the arm sags because of weight. I put in a block of wood at the base to hold up the upper arm; this has reverberating positive effects throughout the arm. I also realized that the forearm was getting disconnected from the elbow servo’s horn because of the weight stress on the joint. Now, I make sure to constantly tighten the screws at that joint. 
+# Demo Night
 
-[![Final Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
+Here is the Demo Night for my project, which is the Gesture Controlled Car with Accelerometer!
 
-# Second Milestone
-My final milestone is the increased reliability and accuracy of my robot. I ameliorated the sagging and fixed the reliability of the finger. As discussed in my second milestone, the arm sags because of weight. I put in a block of wood at the base to hold up the upper arm; this has reverberating positive effects throughout the arm. I also realized that the forearm was getting disconnected from the elbow servo’s horn because of the weight stress on the joint. Now, I make sure to constantly tighten the screws at that joint.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kvBYvs6ONag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[![Third Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612574014/video_to_markdown/images/youtube--y3VAmNlER5Y-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=y3VAmNlER5Y&feature=emb_logo "Second Milestone"){:target="_blank" rel="noopener"}
+# Robot DC Motors and Gestures with Accelerometer
+
+
+My final milestone was setting up the DC motors and determining the gestures for the robot. I soldered the male to male jumper wires to the DC motors and attached the other end of the male to male jumper wires to the OUT of the H bridge for the DC motors. I connected digital pins 6, 7, 8, and 9 to IN1, IN2, IN3, and IN4 of the H bridge respectively. I also had to connect the red wire of the battery switch to +12V of the H bridge, ground pin of the Arduino UNO and black wire of the battery switch to the ground of the H bridge, and 5V of the Arduino UNO to the +5V of the H bridge. The main problem I faced was that the metal part of the black wire of the battery switch was small so I had to strip the wire then solder the metal part and then it was easier to fasten to the ground of the H bridge. In my Arduino IDE, I made a test program to see if the DC motors were working and after seeing that the DC motors worked, I had to figure out the gestures depending on the position of the accelerometer. Using the set of xyz coordinates given from the position of the accelerometer in the Arduino IDE, I was able to determine the gestures according to how I held my accelerometer, through which I then wrote to the Arduino MICRO. The next and final step was transmitting the data from the bluetooth module (which is connected to the Arduino MICRO and the accelerometer) to the other bluetooth module (which is connected to the Arduino UNO, the H bridge, and the robot). Depending on the position of the accelerometer, I had to read the bluetooth data accordingly. After reading the data, I was finally able to get the wheels spinning in the direction I wanted to based on the position of the accelerometer.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dNV2loiNRy4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 # Bluetooth Module Pairing
   
-
+  
 My first milestone was pairing two bluetooth modules together and being able to allow one bluetooth module to gather and receive data from the other bluetooth module through serial communication. I connected my Arduino UNO to the breadboard using jumper wires to connect to the bluetooth module and used resistors to divide current, where I connected RXD and TXD to digital pins 2 and 3 respectively. I also had my Arduino MICRO on the breadboard and used the same connections I made with the Arduino UNO, except I directly connected to TX and RX pins, instead of digital pins 2 and 3. The main problem I came across with was that I was able to make my AT commands work with the Arduino UNO but the AT commands would not work with my Arduino Micro. I had to talk with my instructor and we were able to solve the problem by receiving a new pair of bluetooth modules that were able to work through AT commands with both the Arduino UNO and Arduino MICRO. After connecting both the bluetooth modules, I was able to run the Serial Monitor on one COM port and allow one bluetooth module to gather and receive data from the Serial Monitor on the other COM port.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7DE207wJoCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
