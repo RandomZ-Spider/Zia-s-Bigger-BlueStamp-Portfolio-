@@ -35,6 +35,8 @@ My first milestone was pairing two bluetooth modules together and being able to 
 
 
 # Bill of Materials
+
+|:--:|:--:|:--:|:--:|:--:|:--:|
 | **Part** | **Quantity** | **Description** | **Reference Designator** | **Cost** | **Website** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | Robot Kit | 1 | Chassis, Battery Pack, DC Motors, Wheels, etc. | M1, M2 | 18.99 | [amazon](https://www.amazon.com/perseids-Chassis-Encoder-Wheels-Battery/dp/B07DNYQ3PX)
@@ -56,6 +58,8 @@ My first milestone was pairing two bluetooth modules together and being able to 
 | Resistors | 1 | Control Flow of Electrical Current | N/A | 10.99 | [amazon](https://www.amazon.com/BOJACK-Values-Resistor-Resistors-Assortment/dp/B08FD1XVL6/ref=sr_1_2_sspa?crid=27KYFJ2PLSL8G&keywords=resistor&qid=1656710541&s=industrial&sprefix=resist%2Cindustrial%2C143&sr=1-2-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUE1UTlIUDRJRElBSlomZW5jcnlwdGVkSWQ9QTA0ODQ1ODUyVzBGOEhZN1hJSVNPJmVuY3J5cHRlZEFkSWQ9QTAyMjA5NTdGT1c4RjFYSTkxNTUmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl)
 
 # Tools Required
+
+|:--:|:--:|:--:|
 | **Tool** | **Cost** | **Website** |
 |:--:|:--:|:--:|
 | Soldering Iron | 15.99 | [amazon](https://www.amazon.com/Soldering-Kit-Temperature-Desoldering-Electronics/dp/B07GTGGLXN/ref=asc_df_B07GTGGLXN/?tag=hyprod-20&linkCode=df0&hvadid=241999416883&hvpos=&hvnetw=g&hvrand=137463208067721732&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9031525&hvtargid=pla-590653449503&psc=1)
@@ -64,4 +68,5 @@ My first milestone was pairing two bluetooth modules together and being able to 
 
 
 # Schematics
+
 ![Schematics](https://user-images.githubusercontent.com/82551067/176963218-7c0eecbe-7689-48f5-b6ea-48579ae6fb1c.jpg)
