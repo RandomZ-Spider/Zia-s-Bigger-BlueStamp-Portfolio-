@@ -5,7 +5,7 @@ This project is to be able to control a robot by making gestures with our hands.
 |:--:|:--:|:--:|:--:|
 | Arnesh K | Irvington High School | Software Engineering | Incoming Senior
 
-![Headstone![Headstone Image](https://user-images.githubusercontent.com/82551067/176963922-bd0d1fae-6cec-4a3d-b53b-b8d81b48ec56.jpg)
+![Headstone Image](https://user-images.githubusercontent.com/82551067/176963922-bd0d1fae-6cec-4a3d-b53b-b8d81b48ec56.jpg)
   
 # Demo Night
 
