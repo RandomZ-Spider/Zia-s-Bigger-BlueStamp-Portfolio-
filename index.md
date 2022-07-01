@@ -5,6 +5,7 @@ This project is to be able to control a robot by making gestures with our hands.
 |:--:|:--:|:--:|:--:|
 | Arnesh K | Irvington High School | Software Engineering | Incoming Senior
 
+
 ![Headstone Image](https://user-images.githubusercontent.com/82551067/176963922-bd0d1fae-6cec-4a3d-b53b-b8d81b48ec56.jpg)
   
 # Demo Night
@@ -13,6 +14,7 @@ Here is the Demo Night for my project, which is the Gesture Controlled Car with 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kvBYvs6ONag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
 # Robot DC Motors and Gestures with Accelerometer
 
 
@@ -20,12 +22,14 @@ My final milestone was setting up the DC motors and determining the gestures for
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dNV2loiNRy4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
 # Bluetooth Module Pairing
   
   
 My first milestone was pairing two bluetooth modules together and being able to allow one bluetooth module to gather and receive data from the other bluetooth module through serial communication. I connected my Arduino UNO to the breadboard using jumper wires to connect to the bluetooth module and used resistors to divide current, where I connected RXD and TXD to digital pins 2 and 3 respectively. I also had my Arduino MICRO on the breadboard and used the same connections I made with the Arduino UNO, except I directly connected to TX and RX pins, instead of digital pins 2 and 3. The main problem I came across with was that I was able to make my AT commands work with the Arduino UNO but the AT commands would not work with my Arduino Micro. I had to talk with my instructor and we were able to solve the problem by receiving a new pair of bluetooth modules that were able to work through AT commands with both the Arduino UNO and Arduino MICRO. After connecting both the bluetooth modules, I was able to run the Serial Monitor on one COM port and allow one bluetooth module to gather and receive data from the Serial Monitor on the other COM port.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7DE207wJoCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 # Schematics
 ![Schematics](https://user-images.githubusercontent.com/82551067/176963218-7c0eecbe-7689-48f5-b6ea-48579ae6fb1c.jpg)
