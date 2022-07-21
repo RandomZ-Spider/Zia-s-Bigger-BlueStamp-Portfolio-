@@ -5,7 +5,7 @@ This project is to make a computer game with Unity. The game can be anything and
 |:--:|:--:|:--:|:--:|
 | Arnesh K | Irvington High School | Software Engineering | Incoming Senior
 
-<iframe mozallowfullscreen="true" allow="autoplay; fullscreen" src="https://arneshkumar.github.io/arneshbluestamp/PacmanGame/index.html" style="border:0px #000000 none;" name="My Game" scrolling="no" msallowfullscreen="true" allowfullscreen="true" webkitallowfullscreen="true" allowtransparency="true" frameborder="0" marginheight="px" marginwidth="320px" height="450px" width="760px"></iframe>
+<iframe mozallowfullscreen="true" allow="autoplay; fullscreen" src="https://arneshkumar.github.io/arneshbluestamp/PacmanGame/index.html" style="border:0px #000000 none;" name="My Game" scrolling="no" msallowfullscreen="true" allowfullscreen="true" webkitallowfullscreen="true" allowtransparency="true" frameborder="0" marginheight="px" marginwidth="320px" height="450px" width="660px"></iframe>
 
 # Demo Night
 
