@@ -40,6 +40,7 @@ My first milestone was setting up Unity and getting familiar with the Unity Edit
 | GIMP (GNU Image Manipulation Program) | Designing the Sprites | Free
 
 # Schematics
+![Platform Schematic](https://user-images.githubusercontent.com/82551067/180573692-31c6e1eb-1937-4be3-911e-523261d9906d.png)
 
 # Final Code
 ```c#
