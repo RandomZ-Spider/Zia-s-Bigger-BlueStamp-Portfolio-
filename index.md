@@ -4,8 +4,8 @@
 # BlueStamp Engineering Projects (click on images)
 
 # Way 1
-[![Project 1](Gesture Controlled Robot Image.jpg)](./project1.md)
-[![Project 2](Unity Game Image.jpg)](./project2.md)
+[![Project 1](Gesture Controlled Robot Image.jpg)](./project1.html)
+[![Project 2](Unity Game Image.jpg)](./project2.html)
 
 # Way 2
 [![Project 1](./project1.md)](Gesture Controlled Robot Image.jpg)
