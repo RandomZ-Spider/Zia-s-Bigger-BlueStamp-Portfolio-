@@ -1,4 +1,4 @@
-[Project 2](./project2.md)
+[Homepage](./index.md)
 
 # Gesture Controlled Car With Accelerometer
 This project is to be able to control a robot by making gestures with our hands. The main part of this project is to be able to make a robot and have that robot sense what he have on our hand and the robot is able to move around based on hand movements.
