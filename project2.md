@@ -1,465 +1,819 @@
-[Homepage](./index.md)
-
-# Make Your Own Computer Game
-This project is to make a computer game with Unity. The game can be anything and in the cases of this project, I am making a 2d game called Pacman Isle which is a platformer game just like Super Mario Bros.  
+# A.I. Powered Claw Car
+<!--Replace this text with a brief description (2-3 sentences) of your project. This description should draw the reader in and make them interested in what you've built. You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails!-->
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| Arnesh K | Irvington High School | Software Engineering | Incoming Senior
-
-<iframe mozallowfullscreen="true" allow="autoplay; fullscreen" src="https://arneshkumar.github.io/arneshbluestamp/PacmanGame/index.html" style="border:0px #000000 none;" name="My Game" scrolling="no" msallowfullscreen="true" allowfullscreen="true" webkitallowfullscreen="true" allowtransparency="true" frameborder="0" marginheight="px" marginwidth="320px" height="500px" width="700px"></iframe>
-
-# Demo Night
-
-Here is the Demo Night for my project, which is the Make Your Own Computer Game!
-
-# Side-scroller, Enemies, Main Menu, Game Over Screen, Congratulations Screen, and Audio
-
-My third and final milestone was getting the side-scroller aspect, enemies, main menu, game over and congratulations screen, and audio to work. I first created the script for the side-scroller by setting the transform position equal to the x-axis position of the player, leaving the y-axis and z-axis as is, then attaching the script to the Main Camera. I then created the enemies by using the pacman ghost sprite sheet online and slicing each of the pacman ghosts, all 4 colors and each facing in different directions, totalling 16 pacman ghosts. I had to also create the animations for each of the pacman ghosts depending on the movement, which took time to get through because each of the pacman ghost colors act differently. After getting the pacman ghosts to move accordingly, I decided to make additional touches by adding the super jump powerup which allows the main character to jump high, and the X sign at the start of the game. For the pacman ghosts and the power up, I had to add colliders so that there can be collision detected with the main character. After figuring out the functionality of the enemies, I made the Main Menu screen by creating a new scene called Menu through which I designed the title and buttons. In addition, I created the Game Over Screen and Congratulations Screen which were similar processses, so that once I was able to design one of the screens, I was able to design other two quicker. The main problem was figuring out how to create the screens and layout so in order to figure that out, I had to research online and learn the process, utilizing the UI Game Object. After creating the screens, I got audio clips from online and implemented them into the game. The main problem was that I could not reference multiple audio sources in the script so I created an array of audio sources so that I could index into the array in my script. After getting that to work, I basically added a finish line at the end of the game to indicate the end of the game. I was finally able to complete my game which turned out to be decently difficult in the end!
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eSKkiKTcQrs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-# Character Moving Left, Right, and Jumping
-
-My second milestone was getting my character to move left, right, and jump where I had to make the C# script. I added the Rigidbody2D component to Pacman in order to allow it to react to real time physics, which is, in this case, gravity. I added a circle collider 2D to Pacman and box collider 2d to the ground so that there can be collision detected between the character and ground, and so that the character jumps and does not fall right below the ground. I then had to write the C# script to get my character moving left, right, and jumping. The main way I wanted my character to move was to flip the Pacman when switching to different directions (either left or right). After writing the C# script, my character was moving slowly and rotating, so in order to fix that problem, I had to talk with my instructor and I was able to figure out how to stop the rotation and make my character move faster. I also had to use the Animator tab to create the idle animation (Pacman closed mouth) and the moving animation (Pacman closed mouth and open mouth). In my C# script, I had to also talk with my instructor in order to figure out how to play the animation states depending on if my character is moving or not. In addition, after getting my character to move left, right, and jump, I also had to figure out when my character should be able to jump which is when the character is on the ground, so I had to implement ground check in my script. The keys for moving left and right are either the left and arrow keys or the A and D on the keyboard, and the key for jumping is the space bar on the keyboard. I was finally able to get my character to move left, right, and jump when I started the game.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wAS7bUFawS0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+| Zia S. | Archbishop Mitty Highschool | Computer Engineering | Incoming Sophmore |
 
 
-# Setting Up Unity
+![Picture of Zia](Zia.jpg)
+  
+<!--# Final Milestone (A.I. Powered Claw Car)
 
-My first milestone was setting up Unity and getting familiar with the Unity Editor as well as the sprites and background. I downloaded Unity Hub from the website where I then installed the Unity Editor. After installing the Unity Editor, I was able to then create my new Unity project, in which I selected 2D the Unity game since I am creating a 2D game and I named my project Pacman Isle as that is the name of the game I am planning to make by the end. I was then directed to the Unity Editor, which is where we make our games. I was new to Unity so I had to spend some time figuring out how the Unity Editor works. I then had to create a sprite sheet for the main character, which is Pacman! I used another software called GIMP (GNU Image Manipulation Program) to create a sprite sheet of closed mouth and open mouth Pacman as my game switches between closed mouth and open mouth Pacman. I then exported that sprite sheet to Unity and sliced each individual images (open mouth and closed mouth) through the Sprite Editor, where I was able to drag my main character to the Scene Window. I then got the background of my game from the Unity Asset Store and I organized the layout of the background through the Scene Window. I was finally able to switch to the Game Window and saw how the game would look like as it rendered the game objects, including the main character and the background.
+<iframe width="901" height="507" src="https://www.youtube.com/embed/uxMxAbv3sPU" title="Zia S. Milestone 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ec-3HJSqS9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="901" height="507" src="https://www.youtube.com/embed/zHDSXegHkWQ" title="Hexapod Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-# Development Environment Using Windows 10
+<img src="Zia-Project.png" width = "600" height = "800">
 
-|:--:|:--:|:--:|
-| **Application** | **Description** | **Cost**
-|:--:|:--:|:--:|
-| Unity | Making the Unity Game | Free
-|:--:|:--:|:--:|
-| GIMP (GNU Image Manipulation Program) | Designing the Sprites | Free
+<img src="Picture-Hexapod-V3.jpg" width = "600" height = "553.7513">
 
-# Schematics
-![Platform Schematic](https://user-images.githubusercontent.com/82551067/180573692-31c6e1eb-1937-4be3-911e-523261d9906d.png)
 
-# Final Code
-```c#
-// CameraController.cs
+<!--For your final milestone, explain the outcome of your project. Key details to include are:
+- What you've accomplished since your previous milestone
+- What your biggest challenges and triumphs were at BSE
+- A summary of key topics you learned about
+- What you hope to learn in the future after everything you've learned at BSE-->
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+<!--<h1>Summary</h1>
+<h2>Project</h2>
+My project is an A.I. Powered Claw Car, a robot that travels using 2 wheels controlled by servos and has a claw attached on top. Using a raspberry camera module and an object identification A.I. program, it is capable of identifying various objects based a training data set and pick them up with the claw. <br>
 
-public class CameraController : MonoBehaviour
+<h2>Components</h2>
+<ul>
+  <li>Ultrasonic Sensors</li>
+  <li>0.96'' OLED Display</li>
+  <li>Jumper Cables</li>
+  <li>Small Breadboard</li>
+</ul>
+
+<h2>How Components Work Together</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ultrasonic sensors measure distance by sending out a 40,000 hertz sound wave and receives the pulse coming from the echo of the wave. The microcontroller (the controller board) uses a program to calculate the distance by taking the time it took for the sound wave to come back using the equation distance is equal to time divided by 2 (taking into account the wave going back and forth) times the speed of sound (340 m/s). The OLED display uses 8192 bits which turn on or off, and using the Adafruit library, the OLED can be programmed to display text and images by turning off and on certain bits. The system uses the first ultrasonic sensor to get the distance in cm, and then the OLED takes the distance as an integer value and constantly displays the current distance. The Hexapod also uses the distance value to determine when to dance. The first ultrasonic sensor and OLED display are both attached to a cardboard piece each to make it easier to mount to the Hexapod, and the pins poke through to allow connection to the controller board from behind. The other two ultrasonic sensors are attached to mounts which I modeled and 3D printed on both sides of the Hexapod. 
+
+<h2>What I Accomplished</h2> <!-- What I did in previous milestones and what I did for third milestone. -->
+<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In the previous milestones, I assembled and calibrated the Hexapod, programmed a dance, and built a battery stand. For the third milestone, I added three ultrasonic sensors and an OLED display to the Hexapod. I also programmed the Hexapod to display the measured distance on the OLED. I also programmed it to walk around randomly and dance whenever the ultrasonic sensor detects a distance of 5 cm or less. Using the other two sensors, the Hexapod is also able to traverse through hallways, meaning that whenever it reaches a wall, the Hexapod will dance, check for a gap on each side, and turn towards the gap if found; otherwise, the Hexapod would turn 180 degrees and continue walking. Currently, the dance for the Hexapod is just a boogie, but originally it was longer and more varied. I had to change it because it would not be able to go through hallways due to the change in position.  
+
+<h2>Challenges & Triumps</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some challenges that I had during the project were assembling the Hexapod, building the battery stand, and wire management. I had a lot of trouble attaching the legs to the Hexapod's servo stands; the legs each needed the correct orientation to function properly. It was very tough to fix them on the servo stands correctly; some servos did not fit in the correct direction, and I had to force them into position. It took three days, but I fully assembled the Hexapod and completed the final calibration step to fix any deviations in the legs. The most frustrating part of building the battery holder was measuring the holes correctly. It took me three tries to drill the holes to match the Hexapod's standoffs and fit smoothly. Wire management was time-confusing as the breadboard, which held the ground and power wires, was attached to a cardboard platform at the bottom of the Hexapod. I had to set up the wires from the breadboard so that they were facing the right way for easier connection, but some were too long. As a result, I had to bunch up the wires inside the Hexapod so that the legs did not pull them out which was very frustrating. The same was true for the Trig and Echo pin wires (ultrasonic sensor) and the SDA and SCL pin wires (OLED display). Mounting each device to the Hexapod was challenging as the wires resisted change. It was harder for the two side mounts as I had to cut off the sides of the battery holder to fit the jumper cables for each side ultrasonic sensor; even then, it was still a challenge to screw each mount on. However, I triumphed over these challenges and produced a Hexapod that can measure distance and display it on an OLED display and dance. 
+
+<h2>What I Learned</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I learned many essential topics during the project, such as the basics of Arduino and using breadboards, coding with the Arduino IDE to control different devices such as an ultrasonic sensor, LEDs, and piezo buzzers, how servo motors work, checking for circuit shorts, and using a drill and saw.
+
+<h2>Next Step</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; After learning everything I have learned at BlueStamp Engineering, I really hope to learn more advanced concepts in robotics and electrical engineering. <br><br> 
+
+<h2>Hexapod_Ultrasonic2_OLED.ino</h2>
+
+```c++
+#include <FNHR.h>
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+#define SCREEN_WIDTH 128 // OLED display width, in pixels
+#define SCREEN_HEIGHT 64 // OLED display height, in pixels
+
+// Declaration for an SSD1306 display connected to I2C (SDA, SCL pins)
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+
+FNHR robot;
+
+// Sensor 1
+const int trigPin1 = 2;
+const int echoPin1 = 3;
+
+// Sensor 2
+// Have to put in A0 and A1 manually
+
+// Sensor 3
+const int trigPin3 = 14;
+const int echoPin3 = 15;
+
+long duration;
+int distanceCm1;
+int distanceCm2;
+int distanceCm3;
+int danceCm = 8;
+bool Walk = true;
+
+void setup() 
 {
-    public GameObject player;
+  // Sensor 1
+  pinMode(trigPin1, OUTPUT);
+  pinMode(echoPin1, INPUT);
 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
-    }
+  // Sensor 2
+  pinMode(A1, OUTPUT);
+  pinMode(A0, INPUT);
+
+  // Sensor 3
+  pinMode(trigPin3, OUTPUT);
+  pinMode(echoPin3, INPUT);
+
+  // OLED setup
+  Serial.begin(115200);
+
+  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { // Address 0x3D for 128x64
+    Serial.println(F("SSD1306 allocation failed"));
+    for(;;);
+  }
+  delay(2000);
+  robot.Start();
+  int distanceCm1 = 100;
 }
-```
-
-```c#
-// CongratulationsScreen.cs
-
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-
-public class CongratulationsScreen : MonoBehaviour
+void loop()
 {
-    [SerializeField] GameObject congratulationsScreen;
+  // Ultrasonic sensor 1 measuring
+  digitalWrite(trigPin1, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin1, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin1, LOW);
+  duration = pulseIn(echoPin1, HIGH);
+  distanceCm1 = duration * 0.034 / 2;
+  Serial.println(distanceCm1);
 
-    public void SetCongratulations()
-    {
-        congratulationsScreen.SetActive(true);
-        Time.timeScale = 0;
-    }
+  // Ultrasonic sensor 2 measuring
+  digitalWrite(A1, LOW);
+  delayMicroseconds(2);
+  digitalWrite(A1, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(A1, LOW);
+  duration = pulseIn(A0, HIGH);
+  distanceCm2 = duration * 0.034 / 2;
+  Serial.println(distanceCm2);
 
-    public void RestartGame()
-    {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("Example");
-    }
+  // Ultrasonic sensor 3 measuring
+  digitalWrite(trigPin3, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin3, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin3, LOW);
+  duration = pulseIn(echoPin3, HIGH);
+  distanceCm3 = duration * 0.034 / 2;
+  Serial.println(distanceCm3);
 
-    public void ReturnMenu()
-    {
-        SceneManager.LoadScene("Menu");
-    }
-}
-```
-
-```c#
-// EnemyControllerAllDirections.cs
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class EnemyControllerAllDirections : MonoBehaviour
-{
-    public float speed = 3f;
-    Animator anim;
-
-    Vector3 pos;
-    Vector3[] points; 
-    private int nextPointIndex = 0;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        pos = transform.position;
-        anim = GetComponent<Animator>();
-        points = new [] { new Vector3(pos.x, pos.y, pos.z), new Vector3(pos.x - 3, pos.y, pos.z), new Vector3(pos.x - 3, pos.y + 5, pos.z), new Vector3(pos.x, pos.y + 5, pos.z) };
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        pos = transform.position;
-        bool reachedNextPoint = (pos == points[nextPointIndex]);
-        if (reachedNextPoint)
-        {
-            nextPointIndex++;
-            if (nextPointIndex >= points.Length)
-            {
-                nextPointIndex = 0;
-            }
-        }
-        if (nextPointIndex == 0)
-        {
-            anim.Play("facingDownRectangle");
-        }
-        if (nextPointIndex == 1)
-        {
-            anim.Play("facingLeftRectangle");
-        }
-        if (nextPointIndex == 2)
-        {
-            anim.Play("facingUpRectangle");
-        }
-        if (nextPointIndex == 3)
-        {
-            anim.Play("facingRightRectangle");
-        }
-        transform.position = Vector3.MoveTowards(pos, points[nextPointIndex], speed * Time.deltaTime);
-    }
-}
-```
-
-```c#
-// EnemyControllerDisappear.cs
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class EnemyControllerDisappear : MonoBehaviour
-{
-    public float speed = 10f;
-    Animator anim;
-
-    Vector3 pos;
-    Vector3[] points; 
-    private int nextPointIndex = 0;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        pos = transform.position;
-        anim = GetComponent<Animator>();
-        points = new [] { new Vector3(pos.x, pos.y, pos.z), new Vector3(pos.x - 5, pos.y, pos.z), new Vector3(pos.x - 5, pos.y + 10, pos.z), new Vector3(pos.x, pos.y + 10, pos.z) };
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        pos = transform.position;
-        bool reachedNextPoint = (pos == points[nextPointIndex]);
-        if (reachedNextPoint)
-        {
-            nextPointIndex++;
-            if (nextPointIndex >= points.Length)
-            {
-                nextPointIndex = 0;
-            }
-        }
-        if (nextPointIndex == 0)
-        {
-            anim.Play("disappearFacingDown");
-        }
-        if (nextPointIndex == 1)
-        {
-            anim.Play("disappearFacingLeft");
-        }
-        if (nextPointIndex == 2)
-        {
-            anim.Play("disappearFacingUp");
-        }
-        if (nextPointIndex == 3)
-        {
-            anim.Play("disappearFacingRight");
-        }
-        transform.position = Vector3.MoveTowards(pos, points[nextPointIndex], speed * Time.deltaTime);
-        if (Time.fixedTime%.5 < .4)
-        {
-            GetComponent<Renderer>().enabled = false;
-        }
-        else 
-        {
-            GetComponent<Renderer>().enabled = true;
-        }
-    }
-}
-```
-
-```c#
-// EnemyControllerLeftRight.cs
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class EnemyControllerLeftRight : MonoBehaviour
-{
-    float speed = 2f;
-    float width = 5f;
-    Animator anim;
-    Vector3 pos;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-        pos = transform.position;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        float offSetX = Mathf.Cos(Time.time * speed);
-        transform.position = new Vector3(pos.x + (offSetX * width), pos.y, pos.z);
-        if (offSetX >= 0.92)
-        {
-            anim.Play("pacmanLeft");
-        }
-        else if (offSetX <= -0.92)
-        {
-            anim.Play("pacmanRight");
-        }
-    }
-}
-```
-
-```c#
-// EnemyControllerUpDown.cs
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class EnemyControllerUpDown : MonoBehaviour
-{
-    float speed = 3f;
-    float height = 4f;
-    Animator anim;
-    Vector3 pos;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-        pos = transform.position;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        float offSetY = Mathf.Sin(Time.time * speed);
-        transform.position = new Vector3(pos.x, pos.y + (offSetY * height), pos.z);
-        if (offSetY >= 0.92)
-        {
-            anim.Play("pacmanDown");
-        }
-        else if (offSetY <= -0.92)
-        {
-            anim.Play("pacmanUp");
-        }
-    }
-}
-```
-
-```c#
-// GameOverManager.cs
-
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-
-public class GameOverManager : MonoBehaviour
-{
-    [SerializeField] GameObject gameOverScreen;
-
-    public void SetGameOver()
-    {
-        gameOverScreen.SetActive(true);
-        Time.timeScale = 0;
-    }
+  // Robot walking around randomly and checking sides
+  if (distanceCm1 > danceCm && Walk == true)
+  {
+    robot.CrawlForward();
+  }
+  else
+  {
+    Walk = false;
+    MiniDance();
+    robot.ChangeBodyHeight(50);
+    delay(100);
     
-    public void RestartGame()
+    if (distanceCm2 > danceCm)
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("Example");
+      for (int i = 0; i < 16; i++)
+     {
+       robot.TurnRight();
+     }
+     Walk = true;
     }
+    else if (distanceCm3 > danceCm)
+    {
+      for (int i = 0; i < 16; i++)
+     {
+       robot.TurnLeft();
+     }
+     Walk = true;
+    }
+    else
+    {
+      for (int i = 0; i < 32; i++)
+     {
+       robot.TurnRight();
+     }
+     Walk = true;
+    }
+  }
+  
+  // Distance is less than 10
+  if (distanceCm1 < 10)
+  {
+    display.clearDisplay();
+    display.setTextSize(9);
+    display.setTextColor(WHITE);
+    display.setCursor(40, 0);
+    display.print(distanceCm1);
+    display.display(); 
+  }
 
-    public void ReturnMenu()
-    {
-        SceneManager.LoadScene("Menu");
-    }
+  // Distance more or equal to 10 and less than 100
+  if (distanceCm1 >= 10 && distanceCm1 < 100)
+  {
+    display.clearDisplay();
+    display.setTextSize(9);
+    display.setTextColor(WHITE);
+    display.setCursor(15, 0);
+    display.print(distanceCm1);
+    display.display(); 
+  }
+
+  // Distance more or equal to 100 and less or equal to than 400
+  if (distanceCm1 >= 100 && distanceCm1 <= 400)
+  {
+    display.clearDisplay();
+    display.setTextSize(7);
+    display.setTextColor(WHITE);
+    display.setCursor(1, 10);
+    display.print(distanceCm1);
+    display.display(); 
+  }
+
+  // Distance more than 400
+  if (distanceCm1 > 400)
+  {
+    display.clearDisplay();
+    display.setTextSize(4);
+    display.setTextColor(WHITE);
+    display.setCursor(30, 0);
+    display.println("Too");
+    display.setCursor(30,30);
+    display.println("Far");
+    display.display(); 
+  }
+  
 }
-```
 
-```c#
-// MainMenu.cs
-
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-
-public class MainMenu : MonoBehaviour
+void MiniDance()
 {
-    [SerializeField] GameObject mainMenuScreen;
-    
-    public void PlayGame()
-    {
-        SceneManager.LoadScene("Example");
-        Time.timeScale = 1;
-    }
+  robot.SetActionSpeed(50);
 
-    public void QuitGame()
-    {
-        Application.Quit();
+  delay(500);
+
+  //Max height is 50
+
+  // Dance Move 1
+  for (int i = 0; i < 3; i++)
+  {
+    robot.SetActionSpeed(200);
+    robot.ChangeBodyHeight(50);
+    robot.ChangeBodyHeight(30);
+  }
+}
+
+```
+
+<!--**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**-->
+
+# Second Milestone (A.I. Powered Claw Car)
+
+<iframe width="1177" height="662" src="https://www.youtube.com/embed/mGiasDcI_J0" title="Zia S. Second Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p float="left">
+  <img src="Claw_Pic.jpg" width="534.9527" height="500"> 
+</p>
+
+<h1>Summary</h1>
+<h2>Project</h2>
+My project is an A.I. Powered Claw Car, a robot that travels using 2 wheels controlled by servos and has a claw attached on top. Using a raspberry camera module and an object identification A.I. program, it is capable of identifying various objects based a training data set and pick them up with the claw. <br>
+
+<h2>Components</h2>
+<ul>
+  <li>Acrylic Plates</li>
+  <li>Arduino Nano</li>
+  <li>Arduino Shield</li>
+  <li>Servo Package</li>
+  <li>Joysticks</li>
+  <li>USB Cable</li>
+  <li>Jumper Cables</li>
+  <li>Battery Case</li>
+  <li>AA Batteries</li>
+  <li>Turntable</li>
+</ul>
+
+<h2>How Components Work Together</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The acrylic parts of the claw act as the base and main body that house the servos, Arduino Nano, and Arduino shield. The base of the claw has a servo that rotates a ball-bearing wheel, rotatating the entire claw. Two other servos control the arm of the claw, making it capable of moving up or down. The final servo controls the actual claw; it is attached to one claw half with a gear at the end that is in contact with the gear of the other claw half so when the servo rotates, the entire claw grabs or releases. The servos are controlled by two joysticks that are connected to the Arduino Nano; one controls the rotation and position of the claw arm and the other control the claw itself. 
+
+<h2>Progress</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For the second milestone, I had to cut the ground and voltage wires of the battery port of the claw and solder them to a new battery case as lithium batteries are not allowed in Bluestamp projects. Before beginning assembly, I used the Arduino program, Servo_90_ADJ.ino, provided by the pdf claw tutorial to adjust the servos to all be 90°, using a USB to connect the Arduino Nano to my computer. I then assembled the stand for the Arduino Nano and shield using standoffs and did the same for the ball-bearing base of the claw arm. Next, I added the servo for the base of the claw arm and attached a rectangular piece to it that would allow the servo to rotate the entire base. I then screwed together the claw arm with two servos, making sure that they were straight. Finally, I screwed in the servo for the claw and attached the claw half to it and lined up the other half with the first. I then assembled a simple controller using one of the acrylic plates and screwing in two joysticks. I then did the necessary wiring for the claw to properly work and be controllled by the claw. I uploaded the Arduino program, Arm.ino, provided by the tutorial to the Arduino Nano, allowing me to control the claw with the joysticks. 
+
+<h2>Challenges Faced</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One of the major problems I faced with the claw assembly was screwing in small screws into tiny nuts in tight spaces. It was quite difficult for me and wasted a lot of time. Eventually, I figured out a way to make it easier by always turning the claw over to a side in which the nut would be lying down to facilitate the screwing process. Another problem I faced was accidently attached the rectangular piece the wrong way on the base servo. This was an issue because one, the traction of the servo and the ball-bearing base was weak, leading to little rotation, and two, removing the servo arm from the rectangular piece is difficult. The servo arm is attached to the retangular piece using self-tapping screws which are difficult to remove once they are screwed in. It also did not help that the screwdriver I was using broke away from the handle, making it ineffective. I wasted more time trying to remove the self-tapping screws but managed to get them out using a plier that had a good grip on them. <br>
+
+<h2>Next Step</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My third milestone will be mounting the claw onto the car and programming them to be controlled by the same controller by making communication between the Arduino Uno of the car and Arduino Nano of the claw possible. I must learn how to make communication between two Arduino board possible and how to make a custom controller for the robot. <br> <br>
+
+<h2>Servo_90_ADJ.ino</h2>
+
+```c++
+//
+/*
+ * This code applies to cokoino mechanical arm
+ * Through this link you can download the source code:
+ * https://github.com/Cokoino/CKK0006
+ * Company web site:
+ * http://cokoino.com/
+
+#include<Servo.h>
+Servo myservo1;  // Create a servo class
+Servo myservo2;  // Create a servo class
+Servo myservo3;  // Create a servo class
+Servo myservo4;  // Create a servo class
+
+void setup() {  
+myservo1.attach(4);  //Set the servo control pin as D4
+myservo2.attach(5);  //Set the servo control pin as D5
+myservo3.attach(6);  //Set the servo control pin as D6
+myservo4.attach(7);  //Set the servo control pin as D7
+delay(100);          //delay 100ms 
+}
+/////////////////////////////////////////////////////////
+void loop() {
+ myservo1.write(90);  //The servo is 90 degrees
+ myservo2.write(90);  //The servo is 90 degrees
+ myservo3.write(90);  //The servo is 90 degrees
+ myservo4.write(90);  //The servo is 90 degrees
+ delay(1000);
+ }
+```
+
+<h2>Schematic</h2>
+
+<figure>
+  <img src="M2_Schematic.jpg" alt="Provided by Cokoino" width="600" height="374.7417">
+  <figcaption>Provided by Cokoino.</figcaption>
+</figure>
+
+<h2>Arm.ino</h2>
+
+```c++
+/*
+ * This code applies to cokoino mechanical arm
+ * Through this link you can download the source code:
+ * https://github.com/Cokoino/CKK0006
+ * Company web site:
+ * http://cokoino.com/
+ *                                     ________
+ *                         ----|servo4| 
+ *                        |            --------
+ *                    |servo3|   
+ *                        |
+ *                        |
+ *                    |servo2|
+ *                        |
+ *                        |
+ *                  ___________
+ *                  |  servo1 |
+ *         ____________________
+ *         ____________________
+ * Fanctions:
+ * arm.servo1.read();   //read the servo of angle
+ * arm.servo2.read();
+ * arm.servo3.read();
+ * arm.servo4.read();
+ * 
+ * arm.servo1.write(angle);   //servo run
+ * arm.servo2.write(angle);
+ * arm.servo3.write(angle);
+ * arm.servo4.write(angle);
+ * 
+ * arm.left(speed);    //perform the action 
+ * arm.right(speed);
+ * arm.up(speed);
+ * arm.down(speed);
+ * arm.open(speed);
+ * arm.close(speed);
+ * 
+ * arm.captureAction();    //capture the current action,return pointer array
+ * arm.do_action(int *p,int speed);  //P is a pointer to the array
+ * 
+ * arm.JoyStickL.read_x(); //Returns joystick numerical
+ * arm.JoyStickL.read_y();
+ * arm.JoyStickR.read_x();
+ * arm.JoyStickR.read_y();
+ */
+#include "src/CokoinoArm.h"
+#define buzzerPin 9
+
+CokoinoArm arm;
+int xL,yL,xR,yR;
+
+const int act_max=10;    //Default 10 action,4 the Angle of servo
+int act[act_max][4];    //Only can change the number of action
+int num=0,num_do=0;
+///////////////////////////////////////////////////////////////
+void turnUD(void){
+  if(xL!=512){
+    if(0<=xL && xL<=100){arm.up(10);return;}
+    if(900<xL && xL<=1024){arm.down(10);return;} 
+    if(100<xL && xL<=200){arm.up(20);return;}
+    if(800<xL && xL<=900){arm.down(20);return;}
+    if(200<xL && xL<=300){arm.up(25);return;}
+    if(700<xL && xL<=800){arm.down(25);return;}
+    if(300<xL && xL<=400){arm.up(30);return;}
+    if(600<xL && xL<=700){arm.down(30);return;}
+    if(400<xL && xL<=480){arm.up(35);return;}
+    if(540<xL && xL<=600){arm.down(35);return;} 
     }
+}
+///////////////////////////////////////////////////////////////
+void turnLR(void){
+  if(yL!=512){
+    if(0<=yL && yL<=100){arm.right(0);return;}
+    if(900<yL && yL<=1024){arm.left(0);return;}  
+    if(100<yL && yL<=200){arm.right(5);return;}
+    if(800<yL && yL<=900){arm.left(5);return;}
+    if(200<yL && yL<=300){arm.right(10);return;}
+    if(700<yL && yL<=800){arm.left(10);return;}
+    if(300<yL && yL<=400){arm.right(15);return;}
+    if(600<yL && yL<=700){arm.left(15);return;}
+    if(400<yL && yL<=480){arm.right(20);return;}
+    if(540<yL && yL<=600){arm.left(20);return;}
+  }
+}
+///////////////////////////////////////////////////////////////
+void turnCO(void){
+  if(xR!=512){
+    if(0<=xR && xR<=100){arm.close(0);return;}
+    if(900<xR && xR<=1024){arm.open(0);return;} 
+    if(100<xR && xR<=200){arm.close(5);return;}
+    if(800<xR && xR<=900){arm.open(5);return;}
+    if(200<xR && xR<=300){arm.close(10);return;}
+    if(700<xR && xR<=800){arm.open(10);return;}
+    if(300<xR && xR<=400){arm.close(15);return;}
+    if(600<xR && xR<=700){arm.open(15);return;}
+    if(400<xR && xR<=480){arm.close(20);return;}
+    if(540<xR && xR<=600){arm.open(20);return;} 
+    }
+}
+///////////////////////////////////////////////////////////////
+void date_processing(int *x,int *y){
+  if(abs(512-*x)>abs(512-*y))
+    {*y = 512;}
+  else
+    {*x = 512;}
+}
+///////////////////////////////////////////////////////////////
+void buzzer(int H,int L){
+  while(yR<420){
+    digitalWrite(buzzerPin,HIGH);
+    delayMicroseconds(H);
+    digitalWrite(buzzerPin,LOW);
+    delayMicroseconds(L);
+    yR = arm.JoyStickR.read_y();
+    }
+  while(yR>600){
+    digitalWrite(buzzerPin,HIGH);
+    delayMicroseconds(H);
+    digitalWrite(buzzerPin,LOW);
+    delayMicroseconds(L);
+    yR = arm.JoyStickR.read_y();
+    }
+}
+///////////////////////////////////////////////////////////////
+void C_action(void){
+  if(yR>800){
+    int *p;
+    p=arm.captureAction();
+    for(char i=0;i<4;i++){
+    act[num][i]=*p;
+    p=p+1;     
+    }
+    num++;
+    num_do=num;
+    if(num>=act_max){
+      num=0;
+      buzzer(600,400);
+      }
+    while(yR>600){yR = arm.JoyStickR.read_y();}
+    //Serial.println(act[0][0]);
+  }
+}
+///////////////////////////////////////////////////////////////
+void Do_action(void){
+  if(yR<220){
+    buzzer(200,300);
+    for(int i=0;i<num_do;i++){
+      arm.do_action(act[i],15);
+      }
+    num=0;
+    while(yR<420){yR = arm.JoyStickR.read_y();}
+    for(int i=0;i<2000;i++){
+      digitalWrite(buzzerPin,HIGH);
+      delayMicroseconds(200);
+      digitalWrite(buzzerPin,LOW);
+      delayMicroseconds(300);        
+    }
+  }
+}
+///////////////////////////////////////////////////////////////
+void setup() {
+  //Serial.begin(9600);
+  //arm of servo motor connection pins
+  arm.ServoAttach(4,5,6,7);
+  //arm of joy stick connection pins : xL,yL,xR,yR
+  arm.JoyStickAttach(A0,A1,A2,A3);
+  pinMode(buzzerPin,OUTPUT);
+}
+///////////////////////////////////////////////////////////////
+void loop() {
+  xL = arm.JoyStickL.read_x();
+  yL = arm.JoyStickL.read_y();
+  xR = arm.JoyStickR.read_x();
+  yR = arm.JoyStickR.read_y();
+  date_processing(&xL,&yL);
+  date_processing(&xR,&yR);
+  turnUD();
+  turnLR();
+  turnCO();
+  C_action();
+  Do_action();
 }
 ```
 
-```c#
-// PlayerController.cs
+# First Milestone (A.I. Powered Claw Car)
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+<iframe width="1177" height="662" src="https://www.youtube.com/embed/jHtg-IWIxA0" title="Zia S. First Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-public class PlayerController : MonoBehaviour
+<img src="Car_Pic.jpg"  width="500" height="474.375">
+
+<h1>Summary</h1>
+
+<h2>Project</h2>
+My project is an A.I. Powered Claw Car, a robot that travels using 2 wheels controlled by servos and has a claw attached on top. Using a raspberry camera module and an object identification A.I. program, it is capable of identifying various objects based a training data set and pick them up with the claw. <br>
+
+<h2>Components</h2>
+<ul>
+  <li>Acrylic Plate</li>
+  <li>Arduino Uno</li>
+  <li>Mini Breadboard</li>
+  <li>TT Wheel</li>
+  <li>1" Wheel</li>
+  <li>TT Motor</li>
+  <li>WLAN Module</li>
+  <li>USB Cable</li>
+  <li>Jumper Cables</li>
+  <li>9V Battery</li>
+  <li>IR Reciever</li>
+  <li>IR Controller</li>
+  <li>Velcro</li>
+</ul> <br>
+
+<h2>How Components Work Together</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The acrylic plate acts as the base of the car; everything including the servos, Arduino Uno, mini breadboard, L9110 module, universal wheel, and 9V Battery is attached to it. Whenever a button is pressed on the IR controller, the IR reciever recieves the signal and sends it to the Arduino Uno. The Uno then processes the signal and depending on the button pressed, sends a signal to the L9110 module with the specific activation truth table. This activates the motors and moves the car. 
+
+<h2>Progress</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For the first milestone, I assembled the whole car and downloaded the necessary software, such as the Arduino library IRRemote and the Processing IDE, to control the car using the IR remote. 
+<h2>Challenges Faced</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I had a few troubles attaching the motors to the acrylic plate as the window for attachment was very tight and took me a bit to attach. I also wasted much time looking for specific standoffs that were missing from my kit that were needed for the universal wheel and ended up having to use slightly longer standoffs. 
+
+<h2>Next Step</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The next step is completing my second milestone: assembling the claw and programming it.<br><br>
+
+<h2>Car_Remote_Control.ino</h2>
+
+<h2>Schematic</h2>
+
+<figure>
+  <img src="M1_Schematic.jpg" alt="Provided by SunFounder" width="600" height="374.7417">
+  <figcaption>Provided by Cokoino.</figcaption>
+</figure>
+  
+```c++
+#include <IRremote.h>
+
+const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
+
+const int A_1B = 5;
+const int A_1A = 6;
+const int B_1B = 9;
+const int B_1A = 10;
+
+
+int speed = 150;
+
+void setup() {
+  Serial.begin(9600);
+
+  //motor
+  pinMode(A_1B, OUTPUT);
+  pinMode(A_1A, OUTPUT);
+  pinMode(B_1B, OUTPUT);
+  pinMode(B_1A, OUTPUT);
+
+  //IR remote
+  IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver // Start the receiver
+  Serial.println("REMOTE CONTROL START");
+
+}
+
+void loop() {
+
+  if (IrReceiver.decode()) {
+    //    Serial.println(results.value,HEX);
+    String key = decodeKeyValue(IrReceiver.decodedIRData.command);
+    if (key != "ERROR") {
+      Serial.println(key);
+
+      if (key == "+") {
+        speed += 50;
+      } else if (key == "-") {
+        speed -= 50;
+      } else if (key == "2") {
+        moveForward(speed);
+        delay(1000);
+      } else if (key == "1") {
+        moveLeft(speed);
+      } else if (key == "3") {
+        moveRight(speed);
+      } else if (key == "4") {
+        turnLeft(speed);
+      } else if (key == "6") {
+        turnRight(speed);
+      } else if (key == "7") {
+        backLeft(speed);
+      } else if (key == "9") {
+        backRight(speed);
+      } else if (key == "8") {
+        moveBackward(speed);
+        delay(1000);
+      }
+
+      if (speed >= 255) {
+        speed = 255;
+      }
+      if (speed <= 0) {
+        speed = 0;
+      }
+      delay(500);
+      stopMove();
+    }
+
+    IrReceiver.resume();  // Enable receiving of the next value
+  }
+}
+
+void moveForward(int speed) {
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, speed);
+  analogWrite(B_1B, speed);
+  analogWrite(B_1A, 0);
+}
+
+void moveBackward(int speed) {
+  analogWrite(A_1B, speed);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, speed);
+}
+
+void turnRight(int speed) {
+  analogWrite(A_1B, speed);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, speed);
+  analogWrite(B_1A, 0);
+}
+
+void turnLeft(int speed) {
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, speed);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, speed);
+}
+
+void moveLeft(int speed) {
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, speed);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, 0);
+}
+
+void moveRight(int speed) {
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, speed);
+  analogWrite(B_1A, 0);
+}
+
+void backLeft(int speed) {
+  analogWrite(A_1B, speed);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, 0);
+}
+
+void backRight(int speed) {
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, speed);
+}
+
+void stopMove() {
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, 0);
+}
+
+
+String decodeKeyValue(long result)
 {
-    public float maxSpeed = 100f;
-    public float jumpSpeed = 8f;
-    bool facingRight = true;
-    Rigidbody2D rb;
-    Animator anim;
-    public AudioSource[] audio = new AudioSource[3];
-    
-    public Transform groundCheck;
-    public float groundCheckRadius;
-    public LayerMask groundLayer;
-    private bool isTouchingGround;
-
-    [SerializeField] GameOverManager gameOverManager;
-    [SerializeField] CongratulationsScreen congratulationsManager;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        float move = Input.GetAxis("Horizontal");
-        anim.enabled = true;
-        if (!(rb.velocity.magnitude > 0))
-        {
-            anim.Play("pacmanIdle");
-        }
-        else
-        {
-            anim.Play("pacmanAnimation");
-        }
-        rb.velocity = new Vector3(move * maxSpeed * 4, rb.velocity.y);
-        rb.freezeRotation = true;
-        if (move < 0 && facingRight)
-        {
-            Flip();
-        }
-        else if (move > 0 && !facingRight)
-        {
-            Flip();
-        }
-        if (Input.GetButtonDown("Jump") && isTouchingGround)
-        {
-            audio[0].Play();
-            rb.velocity = new Vector3(rb.velocity.x, jumpSpeed);
-        }
-    }
-
-    // Flip if needed
-    void Flip()
-    {
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
-        facingRight = !facingRight;
-    }
-
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        for (int i = 1; i < 9; i++)
-        {
-            if (coll.gameObject.name == ("pacManGhost " + i) || coll.gameObject.name == "off the map")
-            {
-                audio[1].Play();
-                gameOverManager.SetGameOver();
-                jumpSpeed = 8f;
-            }
-        }
-        if (coll.gameObject.name == "superjump icon")
-        {
-            jumpSpeed = (float) (1.75 * jumpSpeed);
-        }
-        if (coll.gameObject.name == "finish line")
-        {
-           audio[2].Play();
-           congratulationsManager.SetCongratulations();
-           jumpSpeed = 8f;
-        }
+  switch(result){
+    case 0x16:
+      return "0";
+    case 0xC:
+      return "1"; 
+    case 0x18:
+      return "2"; 
+    case 0x5E:
+      return "3"; 
+    case 0x8:
+      return "4"; 
+    case 0x1C:
+      return "5"; 
+    case 0x5A:
+      return "6"; 
+    case 0x42:
+      return "7"; 
+    case 0x52:
+      return "8"; 
+    case 0x4A:
+      return "9"; 
+    case 0x9:
+      return "+"; 
+    case 0x15:
+      return "-"; 
+    case 0x7:
+      return "EQ"; 
+    case 0xD:
+      return "U/SD";
+    case 0x19:
+      return "CYCLE";         
+    case 0x44:
+      return "PLAY/PAUSE";   
+    case 0x43:
+      return "FORWARD";   
+    case 0x40:
+      return "BACKWARD";   
+    case 0x45:
+      return "POWER";   
+    case 0x47:
+      return "MUTE";   
+    case 0x46:
+      return "MODE";       
+    case 0x0:
+      return "ERROR";   
+    default :
+      return "ERROR";
     }
 }
-```
-
-```c#
-// PowerUp.cs
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PowerUp : MonoBehaviour
-{
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        if (coll.gameObject.name == "pacMan16_0")
-        {
-            Destroy(gameObject);
-        }
-    }
 }
+
 ```
+
+<!--# Schematics 
+Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+
+
+# Bill of Materials
+Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
+Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
+
+| **Part** | **Note** | **Price** | **Link** |
+|:--:|:--:|:--:|:--:|
+| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+|:--:|:--:|:--:|:--:|
+| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+|:--:|:--:|:--:|:--:|
+| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+|:--:|:--:|:--:|:--:|-->
+
+# Starter Project (Retro Arcade Console)
+
+<iframe width="1177" height="662" src="https://www.youtube.com/embed/hHAm_oHuuT8" title="Zia C. Starter Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+![Picture of Starter Project](Starter_Project2.jpg)
+
+My Starter Project is the Retro Arcade Console which uses multiple buttons, a digitron display, 2 dot matrixes, and a buzzer to create a full-on gaming experience with 5 retro games including Tetris and Snake.  
+
+Materials:
+* 1 Buzzer
+* 1 220uF 16V Capacitor
+* 1 Micro USB
+* 1 Power Cable
+* 1 Self-switch
+* 1 Self-switch cap
+* 1 Digitron display
+* IC Chip
+* 2 LED dot matrix modules
+* 6 Buttons
+* 6 Button caps
+* 1 PCB
+* 8 M3x5mm Screws
+* 2 M3x8mm Screws
+* 4 Copper columns
+* 4 Hexagonal columns
+* 1 Battery Case
+* 6 Acrylic shells
+* 1 Solder & Soldering Iron
+* 1 Screwdriver
+
+Procedure: 
+1. First, I soldered all of the main parts to the PCB; I soldered the 6 buttons, then the micro USB, then the capacitor, then the self-lock switch, then the digitron display, and finally the dot matrix modules.
+2. Second, I soldered the ground and voltage wires of the battery case to the PCB, attached the case to an acrylic shell using screws, and attached the button caps to all of the buttons.
+3. Finally, I assembled the acyrlic cage using mutiples screws and columns to space out the console. 
+
+
+<!--# Other Resources/Examples
+One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
+- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
+- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
+- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
+
+To watch the BSE tutorial on how to create a portfolio, click here.-->
