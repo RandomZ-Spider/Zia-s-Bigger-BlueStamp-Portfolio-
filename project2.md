@@ -261,7 +261,7 @@ void MiniDance()
 </p>
 
 <figure>
-  <img src="Claw_Pic.jpg" width="534.9527" height="500">
+  <img src="Claw_Picc.jpg" width="534.9527" height="500">
 </figure>
 
 <h1>Summary</h1>
