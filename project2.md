@@ -7,6 +7,12 @@
 
 
 ![Picture of Zia](Zia.jpg)
+
+<figure>
+  <img src="Zia.jpg"  width="50%" height="50%">
+  <figcaption>Picture of Me (2024)</figcaption>
+</figure>
+
   
 <!--# Final Milestone (A.I. Powered Claw Car)
 
@@ -777,8 +783,6 @@ Don't forget to place the link of where to buy each component inside the quotati
 # Starter Project (Retro Arcade Console)
 
 <iframe width="1177" height="662" src="https://www.youtube.com/embed/hHAm_oHuuT8" title="Zia C. Starter Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-![Picture of Starter Project](Starter_Project2.jpg)
 
 <figure>
   <img src="Starter_Project2.jpg" width="50%" height="50%">
