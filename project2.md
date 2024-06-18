@@ -520,7 +520,7 @@ void loop() {
 
 <iframe width="1177" height="662" src="https://www.youtube.com/embed/jHtg-IWIxA0" title="Zia S. First Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<img src="Car_Pic.jpg"  width="500" height="480">
+<img src="Car_Pic.jpg"  width="500" height="474">
 
 <h1>Summary</h1>
 
@@ -560,7 +560,7 @@ My project is an A.I. Powered Claw Car, a robot that travels using 2 wheels cont
 <h2>Schematic</h2>
 
 <figure>
-  <img src="M1_Schematic.jpg" alt="Provided by SunFounder" width="600" height="374.7417">
+  <img src="M1_Schematic.jpg" alt="Provided by SunFounder" width="600" height="400">
   <figcaption>Provided by Cokoino.</figcaption>
 </figure>
   
