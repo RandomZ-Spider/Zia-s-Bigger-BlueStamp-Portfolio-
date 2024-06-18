@@ -780,6 +780,10 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 ![Picture of Starter Project](Starter_Project2.jpg)
 
+<figure>
+  <img src="Starter_Project2.jpg" width="50%" height="50%">
+</figure>
+
 My Starter Project is the Retro Arcade Console which uses multiple buttons, a digitron display, 2 dot matrixes, and a buzzer to create a full-on gaming experience with 5 retro games including Tetris and Snake.  
 
 Materials:
