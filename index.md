@@ -1,7 +1,7 @@
 # Bluestamp Engineering Portfolio
 
 # Picture of Me
-<img src="Zia-Headshot-Large.png" alt="Photo of me" style="width: 400px; height: 400px;"/>
+<img src="Zia-Headshot-Large.png" alt="Photo of me" />
 
 # BlueStamp Engineering Projects (click on images)
 
