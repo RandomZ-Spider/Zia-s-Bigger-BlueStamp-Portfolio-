@@ -5,14 +5,10 @@
 |:--:|:--:|:--:|:--:|
 | Zia S. | Archbishop Mitty Highschool | Computer Engineering | Incoming Sophmore |
 
-
-![Picture of Zia](Zia.jpg)
-
 <figure>
   <img src="Zia.jpg"  width="50%" height="50%">
   <figcaption>Picture of Me (2024)</figcaption>
 </figure>
-
   
 <!--# Final Milestone (A.I. Powered Claw Car)
 
