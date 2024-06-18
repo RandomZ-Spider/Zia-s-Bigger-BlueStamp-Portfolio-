@@ -5,5 +5,5 @@
 
 # BlueStamp Engineering Projects (click on images)
 
-[![Project 1](Picture-Hexapod.png)](./project1.html)
+[![Project 1](Piccture-Hexapod.png)](./project1.html)
 [![Project 2](Unity Game Image.jpg)](./project2.html)
