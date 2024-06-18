@@ -14,9 +14,9 @@
 
 <iframe width="901" height="507" src="https://www.youtube.com/embed/zHDSXegHkWQ" title="Hexapod Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<img src="Zia-Project.png" width = "600" height = "800">
+<img src="Zia-Projectt.png" width = "600" height = "800">
 
-<img src="Picture-Hexapod-V3.jpg" width = "600" height = "553.7513">
+<img src="Piccture-Hexapod-V3.jpg" width = "600" height = "553.7513">
 
 
 <!--For your final milestone, explain the outcome of your project. Key details to include are:
@@ -255,8 +255,8 @@ void MiniDance()
 <iframe width="901" height="507" src="https://www.youtube.com/embed/BK9GC6PL-00" title="Zia S. Milestone 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <p float="left">
-  <img src="Picture-Hexapod-V2.jpg" width="534.9527" height="400">
-  <img src="Picture-Battery-Holder.jpg" width="315.7230" height="400"> 
+  <img src="Piccture-Hexapod-V2.jpg" width="534.9527" height="400">
+  <img src="Piccture-Battery-Holder.jpg" width="315.7230" height="400"> 
 </p>
 
 <h1>Summary</h1>
@@ -448,9 +448,9 @@ void loop()
 
 <iframe width="901" height="507" src="https://www.youtube.com/embed/74lIREHhu28" title="Zia S. Milestone 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<img src="Picture-Processing-Software.png"  width="500" height="399.1228">
+<img src="Piccture-Processing-Software.png"  width="500" height="399.1228">
 
-<img src="Picture-Hexapod.png"  width="500" height="474.375">
+<img src="Piccture-Hexapod.png"  width="500" height="474.375">
 
 <h1>Summary</h1>
 
