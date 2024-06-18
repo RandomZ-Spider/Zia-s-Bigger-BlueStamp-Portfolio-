@@ -260,6 +260,10 @@ void MiniDance()
   <img src="Claw_Pic.jpg" width="534.9527" height="500"> 
 </p>
 
+<figure>
+  <img src="Claw_Pic.jpg" width="534.9527" height="500">
+</figure>
+
 <h1>Summary</h1>
 <h2>Project</h2>
 My project is an A.I. Powered Claw Car, a robot that travels using 2 wheels controlled by servos and has a claw attached on top. Using a raspberry camera module and an object identification A.I. program, it is capable of identifying various objects based a training data set and pick them up with the claw. <br>
