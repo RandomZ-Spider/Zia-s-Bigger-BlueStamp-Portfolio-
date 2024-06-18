@@ -325,7 +325,7 @@ void loop() {
 <h2>Schematic</h2>
 
 <figure>
-  <img src="M2_Schematic.jpg" alt="Provided by Cokoino" width="600" height="400">
+  <img src="M2_Schematic.jpg" alt="Provided by Cokoino" width="600" height="374">
   <figcaption>Provided by Cokoino.</figcaption>
 </figure>
 
@@ -520,7 +520,7 @@ void loop() {
 
 <iframe width="1177" height="662" src="https://www.youtube.com/embed/jHtg-IWIxA0" title="Zia S. First Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<img src="Car_Pic.jpg"  width="500" height="474.375">
+<img src="Car_Pic.jpg"  width="500" height="480">
 
 <h1>Summary</h1>
 
