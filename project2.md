@@ -325,7 +325,7 @@ void loop() {
 <h2>Schematic</h2>
 
 <figure>
-  <img src="M2_Schematic.jpg" alt="Provided by Cokoino" width="600" height="374.7417">
+  <img src="M2_Schematic.jpg" alt="Provided by Cokoino" width="600" height="400">
   <figcaption>Provided by Cokoino.</figcaption>
 </figure>
 
