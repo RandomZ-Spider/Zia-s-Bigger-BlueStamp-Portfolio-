@@ -256,10 +256,6 @@ void MiniDance()
 
 <iframe width="1177" height="662" src="https://www.youtube.com/embed/mGiasDcI_J0" title="Zia S. Second Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<p float="left">
-  <img src="Claw_Pic.jpg" width="534.9527" height="500"> 
-</p>
-
 <figure>
   <img src="Claw_Picc.jpg" width="534.9527" height="500">
 </figure>
