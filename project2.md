@@ -16,10 +16,10 @@
 
 
 <figure>
-  <img src="New_CarPic.jpg" width="534.9527" height="500">
+  <img src="New_CarPic.jpg" width="50%" height="50%">
 </figure>
 <figure>
-  <img src="Remote.jpg" width="534.9527" height="500">
+  <img src="Remote.jpg" width="50%" height="50%">
 </figure>
 
 <!--For your final milestone, explain the outcome of your project. Key details to include are:
