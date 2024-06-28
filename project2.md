@@ -6,7 +6,7 @@
 | Zia S. | Archbishop Mitty Highschool | Computer Engineering | Incoming Sophmore |
 
 <figure>
-  <img src="Zia.jpg"  width="30%" height="30%">
+  <img src="Zia.jpg"  width="50%" height="50%">
   <figcaption>Picture of Me (2024)</figcaption>
 </figure>
   
@@ -19,7 +19,7 @@
   <img src="New_CarPic.jpg" width="50%" height="50%">
 </figure>
 <figure>
-  <img src="Remote.jpg" width="50%" height="50%">
+  <img src="Remote.jpg" width="30%" height="30%">
 </figure>
 
 <!--For your final milestone, explain the outcome of your project. Key details to include are:
