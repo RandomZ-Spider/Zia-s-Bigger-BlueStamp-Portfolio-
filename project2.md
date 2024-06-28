@@ -10,16 +10,17 @@
   <figcaption>Picture of Me (2024)</figcaption>
 </figure>
   
-<!--# Final Milestone (A.I. Powered Claw Car)
+# 3rd Milestone (A.I. Powered Claw Car)
 
-<iframe width="901" height="507" src="https://www.youtube.com/embed/uxMxAbv3sPU" title="Zia S. Milestone 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YPYSJYxstzI" title="Zia S. Third Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<iframe width="901" height="507" src="https://www.youtube.com/embed/zHDSXegHkWQ" title="Hexapod Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<img src="Zia-Project.png" width = "600" height = "800">
-
-<img src="Picture-Hexapod-V3.jpg" width = "600" height = "553.7513">
-
+<figure>
+  <img src="New_CarPic.jpg" width="534.9527" height="500">
+</figure>
+<figure>
+  <img src="Remote.jpg" width="534.9527" height="500">
+</figure>
 
 <!--For your final milestone, explain the outcome of your project. Key details to include are:
 - What you've accomplished since your previous milestone
@@ -27,226 +28,46 @@
 - A summary of key topics you learned about
 - What you hope to learn in the future after everything you've learned at BSE-->
 
-<!--<h1>Summary</h1>
+<h1>Summary</h1>
 <h2>Project</h2>
-My project is an A.I. Powered Claw Car, a robot that travels using 2 wheels controlled by servos and has a claw attached on top. Using a raspberry camera module and an object identification A.I. program, it is capable of identifying various objects based a training data set and pick them up with the claw. <br>
+My project is an A.I. Powered Claw Car, a robot controlled by a wireless remote that travels using 4 wheels and has a servo-powered claw attached on top. Using a raspberry camera module and the object identification A.I. program, Tensorflow, it is capable of identifying various objects based a training data set and pick them up with the claw. <br>
 
 <h2>Components</h2>
 <ul>
-  <li>Ultrasonic Sensors</li>
-  <li>0.96'' OLED Display</li>
+  <li>4 Wheel Acrylic Car Chassis</li>
+  <li>RC Wheels</li>
+  <li>TT Motors</li>
+  <li>L298N Motor Driver Module</li>
+  <li>Arduino Uno</li>
+  <li>Arduino Nano</li>
+  <li>Arduino Joystick Module</li>
   <li>Jumper Cables</li>
-  <li>Small Breadboard</li>
+  <li>Small Breadboards</li>
+  <li>9V Batteries</li>
+  <li>NRF24L01 Wireless Modules<1i>
+  <li>Cokoino Claw Arm</li>
+  <li>Wooden Board</li>
+  <li>Small Switch</li>
+  <li>1 uF Capacitors</li>
 </ul>
 
 <h2>How Components Work Together</h2>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ultrasonic sensors measure distance by sending out a 40,000 hertz sound wave and receives the pulse coming from the echo of the wave. The microcontroller (the controller board) uses a program to calculate the distance by taking the time it took for the sound wave to come back using the equation distance is equal to time divided by 2 (taking into account the wave going back and forth) times the speed of sound (340 m/s). The OLED display uses 8192 bits which turn on or off, and using the Adafruit library, the OLED can be programmed to display text and images by turning off and on certain bits. The system uses the first ultrasonic sensor to get the distance in cm, and then the OLED takes the distance as an integer value and constantly displays the current distance. The Hexapod also uses the distance value to determine when to dance. The first ultrasonic sensor and OLED display are both attached to a cardboard piece each to make it easier to mount to the Hexapod, and the pins poke through to allow connection to the controller board from behind. The other two ultrasonic sensors are attached to mounts which I modeled and 3D printed on both sides of the Hexapod. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Arduino Nano, the joystick module, the small breadboard, and the wireless module are all mounted on a small, rectangular board with the battery velcroed behind. The battery powers the Arduino Nano that contains the code to read the analog values of joystick based on its position, convert the values into bytes (integers 0-255), and transmit those values through the wireless module to be received by the wireless module of the Arduino Nano on the car chassis. With the switch, the remote can be turned on and off. The Arduino Uno on the car chassis processes the received values and based on them, commands the motor driver to power the wheels in a certain direction. For example, holding the joystick forward will move the car forwards, holding it backward moves the car backwards, and vice versa for turining left and right. The entire car chassis is also powered by a 9V battery. 
 
-<h2>What I Accomplished</h2> <!-- What I did in previous milestones and what I did for third milestone. -->
-<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In the previous milestones, I assembled and calibrated the Hexapod, programmed a dance, and built a battery stand. For the third milestone, I added three ultrasonic sensors and an OLED display to the Hexapod. I also programmed the Hexapod to display the measured distance on the OLED. I also programmed it to walk around randomly and dance whenever the ultrasonic sensor detects a distance of 5 cm or less. Using the other two sensors, the Hexapod is also able to traverse through hallways, meaning that whenever it reaches a wall, the Hexapod will dance, check for a gap on each side, and turn towards the gap if found; otherwise, the Hexapod would turn 180 degrees and continue walking. Currently, the dance for the Hexapod is just a boogie, but originally it was longer and more varied. I had to change it because it would not be able to go through hallways due to the change in position.  
+<h2>Progress</h2> <!-- What I did in previous milestones and what I did for third milestone. -->
+<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For the third milestone, I cut out a small rectangular board with a saw and drilled holes into it to act as the base for my remote. I then screwed the joystick module on the board and using the breadboard adhesive, mounted the small breadboard with the Arduino Nano on the board as well. I then made the necessary connection for the remote to work using the jumper cables and also attached the battery to the back of the board using velcro. Finally, I finished the remote by taping the wireless module to the middle of the board. I also setup the necessary connections on the Arduino Uno of the car to make sure that the wireless module was working properly. I coded the remote and the car and was successfully able to control the car wirelessly with little latency. However, I later realized that the car chassis I had from milestone 1 was not large enough to fit all of the necessary hardware for the robot so I asked my instructors for a bigger car chassis to replace it. I assembled the new chassis with four new motors mand mounted the Arduino Uno, a new motor driver, a small breadboard for ground and power connections, and a 9V battery to it. I then reprogrammed the Arduino Uno to controll four wheels instead of two. Finally, I mounted the claw on top of the car using screws and tested the car to see how well it could move with the heavy claw. It worked very well and was able to move effortlessly. 
 
-<h2>Challenges & Triumps</h2>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some challenges that I had during the project were assembling the Hexapod, building the battery stand, and wire management. I had a lot of trouble attaching the legs to the Hexapod's servo stands; the legs each needed the correct orientation to function properly. It was very tough to fix them on the servo stands correctly; some servos did not fit in the correct direction, and I had to force them into position. It took three days, but I fully assembled the Hexapod and completed the final calibration step to fix any deviations in the legs. The most frustrating part of building the battery holder was measuring the holes correctly. It took me three tries to drill the holes to match the Hexapod's standoffs and fit smoothly. Wire management was time-confusing as the breadboard, which held the ground and power wires, was attached to a cardboard platform at the bottom of the Hexapod. I had to set up the wires from the breadboard so that they were facing the right way for easier connection, but some were too long. As a result, I had to bunch up the wires inside the Hexapod so that the legs did not pull them out which was very frustrating. The same was true for the Trig and Echo pin wires (ultrasonic sensor) and the SDA and SCL pin wires (OLED display). Mounting each device to the Hexapod was challenging as the wires resisted change. It was harder for the two side mounts as I had to cut off the sides of the battery holder to fit the jumper cables for each side ultrasonic sensor; even then, it was still a challenge to screw each mount on. However, I triumphed over these challenges and produced a Hexapod that can measure distance and display it on an OLED display and dance. 
-
-<h2>What I Learned</h2>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I learned many essential topics during the project, such as the basics of Arduino and using breadboards, coding with the Arduino IDE to control different devices such as an ultrasonic sensor, LEDs, and piezo buzzers, how servo motors work, checking for circuit shorts, and using a drill and saw.
+<h2>Challenges Faced</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I had many challenges with the third milestone with one of the them being the setup of the wireless module. It required very specific code and wire connections for it to work properly as it has 7 pins that neeeded to be connected to specfic places on the Arduinos for it to work properly. When it did not work the first time, I had to solder a capacitor to each module for less power fluctations so that a smooth connection could be created bewteen the two wireless modules. It started working afterwards, but I then ran into another issue with the transmission of data. At first, I coded the remote to transmit the x value first and then the y value of the joystick module to the car, causing a bug in which the value that was received second would permanently drop the zero and not update. To fix this, I changed the code to send the joystick values in a structure or a data package so the values were sent at the same time. Overall, it took me almost two days to setup the wireless modules. Another challenge I faced was that one motor would always be slower than the other when moving forward, leading to the car turning. This was a problem most likely caused by the universal wheel or the motor driver glitching out but was fixed when I switched to the new car chassis with four wheels, making it virtually impossible for it to not move forward when intended. The switch unfortunetly led to a new problem that wasted three days. The previous motor driver was capable of controlling the speed of the motors with purely code, but the new motor driver needed a separate pin, the Enable pin, to be connected to the 
+Arduino Uno in order to control the speed of the motors. I was absolutely not able to get this to work and tried multiple motor drivers to find out what was wrong. In the end, I gave on on speed control as it was already taking up too much time and moved on to coding the new controls for the car. I was able to control the car as before except it would go forward without turning which was fantastic but run into yet another issue: my computer suddenly stopped working and was not able to access the arduino .inos for the remote and the car, disallowing me from further debugging. I cannot access the codes which is why they are not on this portfolio. As such, I am forced to leave the car and remote as they are despite any bugs that may come up. 
 
 <h2>Next Step</h2>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; After learning everything I have learned at BlueStamp Engineering, I really hope to learn more advanced concepts in robotics and electrical engineering. <br><br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For my modifications or final milestone, I shall add the A.I aspect of the project and use Tensorflow, an object identification program, to power the claw using a Raspberry Pi. 
 
 <h2>Hexapod_Ultrasonic2_OLED.ino</h2>
 
 ```c++
-#include <FNHR.h>
-#include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
 
-#define SCREEN_WIDTH 128 // OLED display width, in pixels
-#define SCREEN_HEIGHT 64 // OLED display height, in pixels
-
-// Declaration for an SSD1306 display connected to I2C (SDA, SCL pins)
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
-
-FNHR robot;
-
-// Sensor 1
-const int trigPin1 = 2;
-const int echoPin1 = 3;
-
-// Sensor 2
-// Have to put in A0 and A1 manually
-
-// Sensor 3
-const int trigPin3 = 14;
-const int echoPin3 = 15;
-
-long duration;
-int distanceCm1;
-int distanceCm2;
-int distanceCm3;
-int danceCm = 8;
-bool Walk = true;
-
-void setup() 
-{
-  // Sensor 1
-  pinMode(trigPin1, OUTPUT);
-  pinMode(echoPin1, INPUT);
-
-  // Sensor 2
-  pinMode(A1, OUTPUT);
-  pinMode(A0, INPUT);
-
-  // Sensor 3
-  pinMode(trigPin3, OUTPUT);
-  pinMode(echoPin3, INPUT);
-
-  // OLED setup
-  Serial.begin(115200);
-
-  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { // Address 0x3D for 128x64
-    Serial.println(F("SSD1306 allocation failed"));
-    for(;;);
-  }
-  delay(2000);
-  robot.Start();
-  int distanceCm1 = 100;
-}
-void loop()
-{
-  // Ultrasonic sensor 1 measuring
-  digitalWrite(trigPin1, LOW);
-  delayMicroseconds(2);
-  digitalWrite(trigPin1, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin1, LOW);
-  duration = pulseIn(echoPin1, HIGH);
-  distanceCm1 = duration * 0.034 / 2;
-  Serial.println(distanceCm1);
-
-  // Ultrasonic sensor 2 measuring
-  digitalWrite(A1, LOW);
-  delayMicroseconds(2);
-  digitalWrite(A1, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(A1, LOW);
-  duration = pulseIn(A0, HIGH);
-  distanceCm2 = duration * 0.034 / 2;
-  Serial.println(distanceCm2);
-
-  // Ultrasonic sensor 3 measuring
-  digitalWrite(trigPin3, LOW);
-  delayMicroseconds(2);
-  digitalWrite(trigPin3, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin3, LOW);
-  duration = pulseIn(echoPin3, HIGH);
-  distanceCm3 = duration * 0.034 / 2;
-  Serial.println(distanceCm3);
-
-  // Robot walking around randomly and checking sides
-  if (distanceCm1 > danceCm && Walk == true)
-  {
-    robot.CrawlForward();
-  }
-  else
-  {
-    Walk = false;
-    MiniDance();
-    robot.ChangeBodyHeight(50);
-    delay(100);
-    
-    if (distanceCm2 > danceCm)
-    {
-      for (int i = 0; i < 16; i++)
-     {
-       robot.TurnRight();
-     }
-     Walk = true;
-    }
-    else if (distanceCm3 > danceCm)
-    {
-      for (int i = 0; i < 16; i++)
-     {
-       robot.TurnLeft();
-     }
-     Walk = true;
-    }
-    else
-    {
-      for (int i = 0; i < 32; i++)
-     {
-       robot.TurnRight();
-     }
-     Walk = true;
-    }
-  }
-  
-  // Distance is less than 10
-  if (distanceCm1 < 10)
-  {
-    display.clearDisplay();
-    display.setTextSize(9);
-    display.setTextColor(WHITE);
-    display.setCursor(40, 0);
-    display.print(distanceCm1);
-    display.display(); 
-  }
-
-  // Distance more or equal to 10 and less than 100
-  if (distanceCm1 >= 10 && distanceCm1 < 100)
-  {
-    display.clearDisplay();
-    display.setTextSize(9);
-    display.setTextColor(WHITE);
-    display.setCursor(15, 0);
-    display.print(distanceCm1);
-    display.display(); 
-  }
-
-  // Distance more or equal to 100 and less or equal to than 400
-  if (distanceCm1 >= 100 && distanceCm1 <= 400)
-  {
-    display.clearDisplay();
-    display.setTextSize(7);
-    display.setTextColor(WHITE);
-    display.setCursor(1, 10);
-    display.print(distanceCm1);
-    display.display(); 
-  }
-
-  // Distance more than 400
-  if (distanceCm1 > 400)
-  {
-    display.clearDisplay();
-    display.setTextSize(4);
-    display.setTextColor(WHITE);
-    display.setCursor(30, 0);
-    display.println("Too");
-    display.setCursor(30,30);
-    display.println("Far");
-    display.display(); 
-  }
-  
-}
-
-void MiniDance()
-{
-  robot.SetActionSpeed(50);
-
-  delay(500);
-
-  //Max height is 50
-
-  // Dance Move 1
-  for (int i = 0; i < 3; i++)
-  {
-    robot.SetActionSpeed(200);
-    robot.ChangeBodyHeight(50);
-    robot.ChangeBodyHeight(30);
-  }
-}
 
 ```
 
